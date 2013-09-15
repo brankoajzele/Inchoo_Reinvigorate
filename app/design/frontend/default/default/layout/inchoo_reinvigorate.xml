@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Inchoo
+ * @package     Inchoo_Reinvigorate
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="before_body_end">
+            <block type="inchoo_reinvigorate/name_tags" name="inchoo_reinvigorate_name_tags" />
+            <block type="inchoo_reinvigorate/tracking_code" name="inchoo_reinvigorate_tracking_code" after="-" />
+        </reference>
+    </default>
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block type="inchoo_reinvigorate/snoop_purchase" name="inchoo_reinvigorate_snoop_purchase" />
+        </reference>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="inchoo_reinvigorate">
+                <title>Checkout Success</title>
+            </action>            
+        </reference>
+    </checkout_onepage_success>
+</layout>
